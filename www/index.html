@@ -97,7 +97,7 @@
               
               
             <li><a href="#message" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-mail ui-btn-icon-right ui-btn-a">Compose message</a></li>
-            <li><a href="#popCamera" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-camera ui-btn-icon-right ui-btn-a" data-position-to="window" data-rel="popup">Take photo</a></li>
+            <li><a href="#popCamera" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-camera ui-btn-icon-right ui-btn-a" data-position-to="window" data-rel="popup" onclick="cameraTakePicture()">Take photo</a></li>
             
         </ul>
         </div>
@@ -148,7 +148,7 @@
     
     
     <div data-role="footer">
-		<
+		
 	</div><!-- /footer -->
    
 </div>
@@ -156,15 +156,27 @@
     
 <!--End of page settings-->
     
+    
+    
+    
+    
+    
 <!--Page message-->
     
     <div data-role="page" data-dialog="false" id="message">
         <div data-role="header" id="homeHead">
             <a href="#page1" data-role="button" data-icon="carat-l" data-iconpos="notext">back</a> 
             <h2>Compose message</h2>
-            <a href="#page1" data-role="button" data-icon="navigation" data-iconpos="notext">Send message</a> 
             
         </div>
+        
+        
+        <div class="ui-content" role="main">
+            <label for="message">Message:</label>
+              <textarea cols="80" rows="30" name="message" id="message" placeholder="Compose message here"></textarea>
+                <a href="#page1" data-role="button" data-icon="navigation" data-iconpos="right">Send message</a> 
+            
+    </div>
         
     </div>
     
